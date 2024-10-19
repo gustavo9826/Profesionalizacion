@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario IMSS Bienestar</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Vincula el archivo CSS -->
+  </head>
+  <body>
+    <div class="container">
+      <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+      <h1>Sistema de visualización de avance para Profesionalización</h1>
+
+      <!-- Bloque para mostrar el mensaje de diálogo -->
+      <div id="dialog" class="dialog" style="display: none">
+        <p id="dialogMessage"></p>
+        <button id="dialogButton">Aceptar</button>
+      </div>
+
+      <div class="form-group">
+        <label for="user_">Usuario</label>
+        <input type="text" id="user_" placeholder="Usuario" />
+      </div>
+      <div class="form-group">
+        <label for="password_">Contraseña</label>
+        <input type="password" id="password_" placeholder="*****" />
+      </div>
+      <button onclick="ingresar()">Ingresar</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+      function ingresar() {
+        let user = document.getElementById("user_").value;
+        let password = document.getElementById("password_").value;
+
+        let users = [
+          { username: "julio.ramos", password: "64WZJEA" },
+          { username: "dulce.castro", password: "YAQQ35C" },
+          { username: "juan.gonzalez", password: "TCH8J06" },
+          { username: "oscar.leone", password: "RTH0WDR" },
+          { username: "alejandro.salmeron", password: "3GD3FHX" },
+          { username: "brenda.salazar", password: "CENS28G" },
+          { username: "jose.floresg", password: "6XZXNB1" },
+          { username: "lucia.mota", password: "SVSTV1H" },
+          { username: "guadalupe.alvarez", password: "FX6N6GB" },
+          { username: "ana.hernandezv", password: "D6Y2G3H" },
+          { username: "andrea.espinoza", password: "0KF7G96" },
+          { username: "enoc.camacho", password: "5MM1VCA" },
+          { username: "ivonne.bohorquez", password: "4Y0XZWS" },
+          { username: "lorena.garcia", password: "3P9DUZ7" },
+          { username: "maria.alonso", password: "XNPUAWE" },
+          { username: "angel.gasca", password: "JC04W8Q" },
+          { username: "maria.ruiz", password: "JGV5952" },
+          { username: "karina.varela", password: "KRVXXXZ" },
+          { username: "maritza.sanchez", password: "D3A309P" },
+          { username: "susana.trevino", password: "TKSWAZX" },
+          { username: "martha.lopez", password: "BTCMRRJ" },
+          { username: "jossette.picazo", password: "8N7A5SD" },
+          { username: "veronica.floresm", password: "WBJU40L" },
+          { username: "nallely.magallan", password: "B28NL6B" },
+          { username: "william.perez", password: "U8CKGLM" },
+          { username: "estefania.rivera", password: "LZD9ZSR" },
+          { username: "Peha.85.ap", password: "GMWZG0U" },
+          { username: "noefco", password: "TM68YC7" },
+          { username: "mc_arguelles", password: "Y3X0AXQ" },
+          { username: "erifabiola", password: "RT4WS21" },
+          { username: "oherrera.hraeo", password: "MANXG8K" },
+          { username: "operacionypagos", password: "4YAME6V" },
+          { username: "mrevilla.hraeb", password: "0FGNCVS" },
+          { username: "agutierrez.hraeb", password: "S97CMPK" },
+          { username: "msandoval", password: "U4D36ZF" },
+          { username: "marianahraepy", password: "7L1WV1H" },
+          { username: "monserratku.hraepy", password: "EKQM3FL" },
+        ];
+
+        if (user === "") {
+          messageError("Campo usuario no puede estar vacío");
+        } else if (password === "") {
+          messageError("Campo contraseña no puede estar vacío");
+        } else {
+          // Verificar si el usuario y la contraseña son correctos
+          const foundUser = users.find(u => u.username === user && u.password === password);
+          if (foundUser) {
+            window.location.href = "home.php";
+          } else {
+            messageError("Usuario o contraseña incorrectos");
+          }
+        }
+
+        // Limpiar campos de entrada
+        $("#user_").val("");
+        $("#password_").val("");
+      }
+
+      function messageError(text) {
+        const Toast = Swal.mixin({
+          toast: true,
+          position: "top-end",
+          showConfirmButton: false,
+          timer: 3000,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.onmouseenter = Swal.stopTimer;
+            toast.onmouseleave = Swal.resumeTimer;
+          },
+        });
+        Toast.fire({
+          icon: "error",
+          title: text,
+        });
+      }
+    </script>
+  </body>
+</html>

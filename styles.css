@@ -1,0 +1,171 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e6e6e6; /* Color de fondo gris claro */
+    background-image: url('imss.png'); /* Asegúrate de que la imagen esté en la misma carpeta o ajusta la ruta */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #ffffff; /* Blanco para el contenedor */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 800px;
+    text-align: left; /* Alinea todo el texto a la izquierda */
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 32px;
+    color: #004d40; /* Verde IMSS */
+    text-align: center; /* Centra el título */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold; /* Negritas */
+    color: #0c0000; /* Rojo vino IMSS */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+input[type="text"],input[type="password"], input[type="email"], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cfd8dc; /* Color gris claro para el borde */
+    border-radius: 6px;
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total del input */
+}
+
+button {
+    background-color: #004d40; /* Verde oscuro IMSS */
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    display: inline-block; /* Ajusta el tamaño del botón según su contenido */
+}
+
+button:hover {
+    background-color: #003d36; /* Verde más oscuro para el hover */
+}
+
+.dialog {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    z-index: 1000;
+    width: 400px;
+    max-width: 90%;
+    text-align: center;
+}
+
+.dialog p {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.dialog button {
+    background-color: #004d40; /* Verde oscuro IMSS */
+    color: #ffffff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.dialog button:hover {
+    background-color: #003d36; /* Verde más oscuro para el hover */
+}
+/* Añadir en styles.css */
+
+.file-button {
+    display: inline-block;
+    background-color: #004d40; /* Verde oscuro IMSS */
+    color: #ffffff;
+    border: 1px solid #004d40; /* Borde del mismo color que el fondo del botón */
+    padding: 12px 20px; /* Tamaño del botón */
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px; /* Tamaño de fuente del botón */
+    margin: 5px 0; /* Espaciado vertical entre los botones */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.file-button:hover {
+    background-color: #003d36; /* Verde más oscuro para el hover */
+    border-color: #003d36; /* Cambiar color del borde en el hover */
+}
+
+#fileName {
+    margin-top: 5px;
+    color: #666; /* Color gris para el texto del nombre del archivo */
+}
+        .dialog {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .dialog button {
+            margin-top: 10px;
+        }
+
+        .file-button {
+            cursor: pointer;
+            color: #005c4d; /* Verde oscuro IMSS */
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        .file-list {
+            margin-top: 10px;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .file-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        .file-list button {
+            margin-left: 10px;
+            color: #d32f2f; /* Rojo vino IMSS */
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
