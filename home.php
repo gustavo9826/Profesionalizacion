@@ -36,7 +36,7 @@
 
 <body>
     <iframe title="Brechas" width="800" height="950"
-        src="https://app.powerbi.com/view?r=eyJrIjoiMDFmNzlhMDMtNjFiMy00YTZkLWFmMWUtNTAxMzA5NzY1Y2FkIiwidCI6ImQxMzQ3MmY3LTVkMmQtNGU5NS1iNmIwLWZhNWE1ODhjODMyZCIsImMiOjR9"
+        src="https://app.powerbi.com/view?r=eyJrIjoiNTQ4MDRlZWEtNzBjMS00MzEyLWJjMDUtNzg2NWY3YzEwYzgyIiwidCI6ImQxMzQ3MmY3LTVkMmQtNGU5NS1iNmIwLWZhNWE1ODhjODMyZCIsImMiOjR9"
         frameborder="0" allowFullScreen="true"></iframe>
 </body>
 
